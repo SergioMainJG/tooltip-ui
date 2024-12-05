@@ -1,4 +1,4 @@
-# Image Grid
+# Tooltip UI
 
 1. Realize a git clone to:
 
