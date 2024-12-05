@@ -1,0 +1,155 @@
+:root {
+  --bone: hsl(0, 0%, 95%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: hsl(0, 0%, 99%);
+  width: 100vw;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.titles-container {
+  text-align: center;
+  background: var(--bone);
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.8em;
+}
+.main-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-items: center; */
+  align-items: center;
+}
+.bottom-container {
+  text-align: center;
+  background: var(--bone);
+}
+a {
+  color: hsl(239, 100%, 40%);
+  text-decoration: none;
+}
+.header-nav {
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.header-nav > h3 {
+  width: 30%;
+}
+.arrow-to-right {
+  width: 60px;
+  height: 3px;
+  background: black;
+  position: relative;
+  margin: 20px;
+}
+.arrow-to-right::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid black;
+}
+.menu-pages {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.helper-menu-home {
+  position: relative;
+  cursor: pointer;
+}
+.helper-menu-home::after {
+  content: "This is our home page, you can see all my proudcts!";
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.helper-menu-home:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.helper-menu-projects {
+  position: relative;
+  cursor: pointer;
+}
+.helper-menu-projects::after {
+  content: "All my projects are there";
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.helper-menu-projects:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.helper-menu-blog {
+  position: relative;
+  cursor: pointer;
+}
+.helper-menu-blog::after {
+  content: "My blog is about tech and development!";
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.helper-menu-blog:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
